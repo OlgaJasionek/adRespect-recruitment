@@ -1,0 +1,39 @@
+:root {
+  --brown-color: #dcc1ab;
+  --green-color: #1b5b31;
+  --gray-color: #f5f0ec;
+}
+:root {
+  --xs-font-size: 12px;
+  --sm-font-size: 14px;
+  --standard-font-size: 16px;
+  --lg-font-size: 24px;
+  --xl-font-size: 48px;
+  --xxl-font-size: 60px;
+}
+
+.no-outline:focus {
+  outline: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(165, 164, 164);
+}
+
+.body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.home-section {
+  background-color: var(--brown-color);
+  height: 737px;
+}
+
+.home-section_title {
+  font-size: var(--xxl-font-size);
+}
+
+.home-section_hero-img {
+  height: 737px;
+  background-image: url("public/img/hero-photo.png");
+  background-position: center;
+}
