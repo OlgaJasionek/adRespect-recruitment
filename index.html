@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giard design</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
@@ -25,14 +25,15 @@
             <img src="public/img/logo.svg" alt="logo">
           </a>
         </div>
-        <ul class="nav d-flex  justify-content-end">
-          <li class="nav-item dropdown no-outline nav_offer-link ">
-            <div class="navbar-collapse">
-              <button class=" btn dropdown d-flex align-items-center" data-bs-toggle="dropdown" aria-expanded="false">
+        <ul class="nav d-flex justify-content-end sm-font-size">
+          <li class="nav-item dropdown  nav_offer-link ">
+            <div class="navbar-collapse ">
+              <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size" data-bs-toggle="dropdown"
+                aria-expanded="false">
                 Oferta <img class="ml-1" src="public/img/offer-icon.svg" alt="down-arrow-icon">
               </button>
-              <ul class="dropdown-menu dropdown-menu ">
-                <li><a class="dropdown-item fs-1" href="#">Oferta</a></li>
+              <ul class="dropdown-menu dropdown-menu  ">
+                <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
                 <li><a class="dropdown-item" href="#">Projekty</a></li>
                 <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
                 <li><a class="dropdown-item" href="#">Realizacje</a></li>
@@ -43,27 +44,104 @@
           <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
           <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
           <li class="nav-item d-flex">
-            <input type="text" placeholder="Wyszukaj" class="form-control no-outline">
+            <!-- <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size"> -->
             <img class="nav-link" src="public/img/search-icon.svg" alt="search-icon">
           </li>
         </ul>
       </div>
   </section>
 
-  <section class="home-section" id="Home">
-    <div class="d-flex ">
-      <div class="container">
-        <div>
-          <h1 class="home-section_title">Nowoczesna aranżacja twojego ogrodu </h1>
-          <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji. Oferujemy kompleksowy zakres
-            usług z indywidualnym podejściem do każdego projektu.</p>
+  <section class="home-section  carousel slide" id="home-section">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="home-section_background">
+          <div class="home-section_background-brown"></div>
+          <div class="home-section_background-img1"></div>
+        </div>
+        <div class="home-section_text">
+          <div class="container h-100">
+            <div class="home-section_text-content">
+              <h1 class="xxl-font-size">Nowoczesna aranżacja twojego ogrodu </h1>
+              <p class="mt-5 mb-0">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji.
+                Oferujemy
+                kompleksowy zakres
+                usług z indywidualnym podejściem do każdego projektu.</p>
+              <div class="home-section_btn-group">
+                <button class="button button-green-filled ">Skontaktuj się z nami</button>
+                <button class="button button-green-outline">Zobacz nasze realizacje <img class="pl-1"
+                    src="public/img/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class=" col-6 home-section_hero-img">
+      <div class="carousel-item">
+        <div class="home-section_background">
+          <div class="home-section_background-brown"></div>
+          <div class="home-section_background-img2"></div>
+        </div>
+        <div class="home-section_text">
+          <div class="container h-100">
+            <div class="home-section_text-content">
+
+              <h1 class="xxl-font-size">Zaprojektujmy razem twój ogród </h1>
+              <p class="mt-5 mb-0">Kompleksowe podejście do każdego klienta indywidualnie. Poznaj nas lepiej i zobacz
+                jakich realizacji się podejmujemy. </p>
+              <div class="home-section_btn-group">
+                <button class="button button-green-outline">Zobacz nasze realizacje <img class="pl-1"
+                    src="public/img/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="home-section_carousel-panel">
+      <div class="home-section_carousel-button" type="button" data-bs-target="#home-section" data-bs-slide="prev">
+        <img aria-hidden="true" src="public/img/prev-arrow.svg" alt="prev-slide-icon">
+      </div>
+      <div class="home-section_carousel-button" type="button" data-bs-target="#home-section" data-bs-slide="next">
+        <img aria-hidden="true" src="public/img/next-arrow.svg" alt="next-slide-icon">
       </div>
     </div>
   </section>
-  <section id="Offer"></section>
+  <section class="offer-section" id="Offer">
+    <div class="container">
+      <header class="offer-section_header">
+        <p class="green-badge">Oferta</p>
+        <h2 class="title">Działamy <span class="title title-italic">kompleksowo</span></h2>
+        <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz
+          rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie
+          posłużymy radą i wieloletnim doświadczeniem. </p>
+      </header>
+      <div class="offer-section_content">
+        <div class="card">
+          <div>
+            <img src="public/img/projects-icon.svg" alt="pen-icon">
+          </div>
+          <h3>Projekty</h3>
+          <p>Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
+          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+        </div>
+        <div class="card">
+          <div>
+            <img src="public/img/visualisations-icon.svg" alt="pen-icon">
+          </div>
+          <h3>Wizualizacje</h3>
+          <p>Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
+          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+        </div>
+        <div class="card">
+          <div>
+            <img src="public/img/realizations-icon.svg" alt="pen-icon">
+          </div>
+          <h3>Realizacje</h3>
+          <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
+          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+        </div>
+      </div>
+    </div>
+  </section>
   <section id="AboutUs"></section>
   <section id="Realizations"></section>
   <section id="Contact"></section>
