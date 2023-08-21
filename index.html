@@ -14,6 +14,7 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/path/to/masonry.pkgd.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,7 @@
       <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
         <div>
           <a href="#Home">
-            <img src="public/img/logo.svg" alt="logo">
+            <img src="public/img/logo-black.svg" alt="logo">
           </a>
         </div>
         <ul class="nav d-flex justify-content-end sm-font-size">
@@ -61,14 +62,14 @@
         <div class="home-section_text">
           <div class="container h-100">
             <div class="home-section_text-content">
-              <h1 class="xxl-font-size">Nowoczesna aranżacja twojego ogrodu </h1>
+              <h1 class="home-section_main-title xxl-font-size">Nowoczesna aranżacja Twojego ogrodu </h1>
               <p class="mt-5 mb-0">Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji.
                 Oferujemy
                 kompleksowy zakres
                 usług z indywidualnym podejściem do każdego projektu.</p>
               <div class="home-section_btn-group">
                 <button class="button button-green-filled ">Skontaktuj się z nami</button>
-                <button class="button button-green-outline">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button-outline button-outline_green">Zobacz nasze realizacje <img class="pl-1"
                     src="public/img/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
@@ -84,11 +85,11 @@
           <div class="container h-100">
             <div class="home-section_text-content">
 
-              <h1 class="xxl-font-size">Zaprojektujmy razem twój ogród </h1>
+              <h1 class="home-section_main-title xxl-font-size">Zaprojektujmy razem twój ogród </h1>
               <p class="mt-5 mb-0">Kompleksowe podejście do każdego klienta indywidualnie. Poznaj nas lepiej i zobacz
                 jakich realizacji się podejmujemy. </p>
               <div class="home-section_btn-group">
-                <button class="button button-green-outline">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button-outline button-outline_green">Zobacz nasze realizacje <img class="pl-1"
                     src="public/img/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
@@ -108,7 +109,7 @@
   <section class="offer-section" id="Offer">
     <div class="container">
       <header class="offer-section_header">
-        <p class="green-badge">Oferta</p>
+        <p class="badge green-badge">Oferta</p>
         <h2 class="title">Działamy <span class="title title-italic">kompleksowo</span></h2>
         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz
           rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie
@@ -116,36 +117,119 @@
       </header>
       <div class="offer-section_content">
         <div class="card">
-          <div>
+          <div class="card_icon">
             <img src="public/img/projects-icon.svg" alt="pen-icon">
           </div>
-          <h3>Projekty</h3>
-          <p>Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej przestrzeni.</p>
-          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          <h3 class="card_title">Projekty</h3>
+          <p class="card_text">Zaprojektujemy Twój ogród w nowoczesnym stylu i z najlepszym wykorzystaniem istniejącej
+            przestrzeni.</p>
+          <div class="card_link">
+            <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          </div>
         </div>
         <div class="card">
-          <div>
+          <div class="card_icon">
             <img src="public/img/visualisations-icon.svg" alt="pen-icon">
           </div>
-          <h3>Wizualizacje</h3>
-          <p>Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w technologii 3D.</p>
-          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          <h3 class="card_title">Wizualizacje</h3>
+          <p class="card_text">Przedstawimy Ci projekty koncepcyjne w postaci wirtualnego spaceru animowanego w
+            technologii 3D.</p>
+          <div class="card_link">
+            <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          </div>
         </div>
         <div class="card">
-          <div>
+          <div class="card_icon">
             <img src="public/img/realizations-icon.svg" alt="pen-icon">
           </div>
-          <h3>Realizacje</h3>
-          <p>Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych technologii.</p>
-          <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          <h3 class="card_title">Realizacje</h3>
+          <p class="card_text">Zrealizujemy Twoje marzenie przy użyciu najnowszych rozwiązań i zaawansowanych
+            technologii.</p>
+          <div class="card_link">
+            <a href="">Dowiedz się więcej <img src="public/img/green-arrow-right.svg" alt="right-arrow-icon"></a>
+          </div>
         </div>
       </div>
     </div>
   </section>
-  <section id="AboutUs"></section>
-  <section id="Realizations"></section>
-  <section id="Contact"></section>
+  <section class="aboutUs-section" id="AboutUs">
+    <div class="aboutUs-section_background">
+      <div class="aboutUs-section_background-img"></div>
+      <div class="aboutUs-section_background-green"></div>
+    </div>
+    <div class="aboutUs-section_content">
+      <div class="container h-100 aboutUs-section_background">
+        <div></div>
+        <div class="aboutUs-section_text">
+          <p class="badge white-badge">O firmie</p>
+          <h2 class="title">Tworzymy z <span class="title title-italic">pasją</span></h2>
+          <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci,
+            których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie
+            nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe,
+            dostosowane do współczesnego trybu życia.</p>
+          <div class="home-section_btn-group">
+            <button class="button button-outline button-outline_white">Poznaj nas bliżej<img class="pl-2"
+                src="public/img/right-arrow-white.svg" alt="green-arrow-down-icon"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="realizations-section" id="Realizations">
+    <div class="container">
+      <div class="realizations-section_title">
+        <p class="badge green-badge">Realizacje</p>
+        <h2 class="title">Nasze <span class="title title-italic">projekty</span></h2>
+      </div>
+    </div>
+    <div class="realizations-section_gallery">
 
+    </div>
+  </section>
+  <section class="contact-section" id="Contact">
+    <div class="container">
+      <div class="contact-section_background">
+        <div class="contact-section_title">
+          <h2 class="title">Zostańmy w kontakcie! Znajdziesz nas na <span class="title title-italic">Instagramie.</span>
+          </h2>
+        </div>
+        <div class="contact-section_content">
+          <p class="">Śledź nasze najnowsze realizacje!</p>
+          <button class="button button-white-filled">Instagram</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container h-100">
+      <div class="footer_contact-us">
+        <img src="public/img/logo-white.svg" alt="logo-white">
+        <div class="footer_contact-us-text">
+          <p class="mb-0 mr-2">Daj znać co możemy dla Ciebie zrobić!</p>
+          <button class="button button-green-filled">Skontaktuj się z nami</button>
+        </div>
+      </div>
+      <hr class="footer_white-line">
+      <div class="footer_contact-data">
+        <div class="footer_contact-data-social-media">
+          <a href="">Kontakt</a>
+          <a href="">Instagram</a>
+          <a href="">Facebook</a>
+          <a href="">Linkedin</a>
+        </div>
+        <div class="footer_contact-data-details">
+          <a href=”tel:000-000-000″>000-000-000</a>
+          <a href="mailto:giarddesign@kontakt.pl">giarddesign@kontakt.pl</a>
+        </div>
+      </div>
+      <div class="footer_rights">
+        <p>Prawa zastrzeżone &copy; <span id="currentYear"></span></p>
+        <p class="footer_rights-author">made by <img class="ml-2" src="public/img/adRespect-logo.svg"
+            alt="adRespect-logo"></p>
+      </div>
+    </div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

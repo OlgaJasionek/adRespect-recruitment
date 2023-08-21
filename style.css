@@ -66,6 +66,10 @@
   width: 45%;
 }
 
+.home-section_main-title {
+  font-family: "Montserrat", sans-serif;
+}
+
 .home-section_btn-group {
   margin-top: 70px;
   display: flex;
@@ -100,6 +104,133 @@
   margin-top: 96px;
 }
 
+.offer-section_content .card:first-child {
+  margin-right: 64px;
+}
+
+.offer-section_content .card:last-child {
+  margin-left: 64px;
+}
+
+.aboutUs-section {
+  position: relative;
+}
+
+.aboutUs-section_background {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.aboutUs-section_background-green {
+  background-color: var(--green-color);
+}
+
+.aboutUs-section_background-img {
+  height: 720px;
+  background-image: url("public/img/O\ firmie-block.png");
+}
+
+.aboutUs-section_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.aboutUs-section_text {
+  height: 100%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+}
+
+.realizations-section {
+  padding: 120px 0;
+  background-color: var(--brown-color);
+}
+
+.realizations-section_title {
+  margin: 0px 100px;
+}
+
+.realizations-section_gallery {
+  display: grid;
+}
+
+.contact-section {
+  padding: 60px;
+}
+
+.contact-section_background {
+  padding: 120px 110px;
+  background-color: var(--green-color);
+  display: flex;
+  color: white;
+}
+
+.contact-section_title {
+  padding-right: 64px;
+}
+
+.footer {
+  padding: 80px 0;
+  background-color: black;
+  color: white;
+}
+
+.footer_contact-us {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_contact-us-text {
+  display: flex;
+  align-items: center;
+}
+
+.footer_white-line {
+  background-color: white;
+  margin: 62px 0;
+}
+
+.footer_contact-data {
+  padding-bottom: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_contact-data a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+}
+
+.footer_contact-data-details a:last-child {
+  margin-right: 0;
+}
+
+.footer_contact-data-social-media a:first-child {
+  margin-left: 0;
+}
+
+.footer_rights {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer_rights-author {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .button {
   border-radius: 25px;
   padding: 12px 24px 14px;
@@ -116,15 +247,38 @@
   background-color: var(--dark-green-color);
 }
 
-.button-green-outline {
-  border: 1px solid var(--green-color);
+.button-white-filled {
+  border: white;
+  background-color: white;
   color: var(--green-color);
-  background-color: transparent;
-  transition: box-shadow, 0.5s;
+  transition: background-color, 0.5s;
 }
 
-.button-green-outline:hover {
-  box-shadow: 1px 2px var(--dark-green-color);
+.button-white-filled:hover {
+  background-color: var(--gray-color);
+}
+
+.button-outline {
+  background-color: transparent;
+  transition: background-color, 0.5s;
+}
+
+.button-outline_green {
+  color: var(--green-color);
+  border: 1px solid var(--green-color);
+}
+
+.button-outline_white {
+  color: white;
+  border: 1px solid white;
+}
+
+.button-outline_green:hover {
+  background-color: rgba(5, 44, 5, 0.1);
+}
+
+.button-outline_white:hover {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 .no-outline:focus {
@@ -144,12 +298,20 @@
   font-weight: 600;
 }
 
-.green-badge {
+.badge {
   font-size: var(--xs-font-size);
+}
+
+.green-badge {
   color: var(--green-color);
 }
 
+.white-badge {
+  color: white;
+}
+
 .title {
+  font-family: "Montserrat", sans-serif;
   font-size: var(--xl-font-size);
   padding-bottom: 32px;
 }
@@ -165,4 +327,28 @@
   border-radius: 25px;
   border: none;
   box-shadow: 2px 5px rgb(240, 238, 238);
+  transition: box-shadow 0.5s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card_icon {
+  margin-bottom: 32px;
+}
+
+.card_title {
+  margin-bottom: 12px;
+}
+
+.card_link a {
+  padding-bottom: 5px;
+  border-bottom: 1px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.card_link a:hover {
+  text-decoration: none;
 }
