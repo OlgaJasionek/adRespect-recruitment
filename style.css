@@ -20,59 +20,98 @@ body {
   height: 100vh;
 }
 
+a {
+  text-decoration: none;
+}
 
+.navigation a {
+  color: black;
+  transition: color, .5s;
+}
 
-.nav-offer-link{
+.navigation a:hover {
+  color: var(--green-color);
+}
+
+.nav-offer-link {
  padding: 8px 16px;
+ background-color: transparent;
 }
 
-.nav-offer-link:active{
-border: none;
+.nav-offer-link:hover {
+  background-color: transparent;
+ }
+
+.nav-offer-link:active, .nav-offer-link:focus {
+  border: none !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: 0 !important;
 }
 
-.navigation-searchbar{
+.mobile-navigation_content .nav-offer-link {
+  padding: 0;
+}
+
+.mobile-navigation_content .nav-item {
+  padding: 8px 0;
+}
+
+
+.navigation-searchbar {
   display: none;
 }
 
-.navigation-searchbar--show{
+.navigation-searchbar--show {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.navigation-searchbar input{
+.navigation-searchbar_button {
   padding: 8px 16px;
-  margin-left: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--gray-color);
+  transition: background-color, 0.5s;
+}
+.navigation-searchbar_button:hover {
+  background-color: var(--brown-color);
 }
 
-.search-icon{
+.navigation-searchbar input {
+  padding: 8px 16px;
+}
+
+.search-icon {
   cursor: pointer;
 }
 
-.desctop-navigation{
+.desktop-navigation {
   display: none;
 
-  @media(min-width: 992px){
-  display:block;
+  @media(min-width: 992px) {
+   display:block;
   }
 }
 
-.mobile-navigation{
-  @media(min-width: 992px){
-  display:none;
+.mobile-navigation {
+  @media(min-width: 992px) {
+    display:none;
   }
 }
 
-.mobile-navigation_menu-btn{
+.mobile-navigation_menu-btn {
   background-color: var(--gray-color);
   transition: background-color, 0.5s;
 }
 
-.mobile-navigation_menu-btn:hover{
+.mobile-navigation_menu-btn:hover {
   background-color: var(--brown-color);
 }
 
-.mobile-navigation_content{
+.mobile-navigation_content { 
   border: 1px solid,rgb(183, 183, 183);
   position: fixed;
   top: 0;
@@ -81,16 +120,16 @@ border: none;
   background-color: white;
   z-index: 1;
   width: 300px;
-  transform: translateX(300px);
+  transform: translateX(320px);
   box-shadow: -4px 4px 4px 4px rgba(222, 222, 222, 0.3);
   transition: transform, 0.5s;
 }
 
-.mobile-navigation_content--active{
+.mobile-navigation_content--active {
   transform: translateX(0px);
 }
 
-.mobile-navigation_content-list{
+.mobile-navigation_content-list {
   padding: 40px 20px;
   list-style: none;
   display: flex;
@@ -99,15 +138,14 @@ border: none;
   justify-content: center;
 }
 
-.mobile-navigation_content-close-menu-btn{
+.mobile-navigation_content-close-menu-btn {
   background-color: var(--gray-color);
   transition: backgroud-color, .5s;
 }
 
-.mobile-navigation_content-close-menu-btn:hover{
+.mobile-navigation_content-close-menu-btn:hover {
   background-color: var(--brown-color);
 }
-
 
 .home-section {
   position: relative;
@@ -202,7 +240,7 @@ border: none;
   }
 }
 
-.home-section_btn-group button{
+.home-section_btn-group button {
   margin-bottom: 10px;
   @media(min-width:1200px){
     margin-bottom:0;
@@ -240,7 +278,7 @@ border: none;
   }
 }
 
-.offer-section_header-title{
+.offer-section_header-title {
   padding-bottom: 20px;
 
   @media(min-width: 992px){
@@ -264,7 +302,7 @@ border: none;
   }
 }
 
-.offer-section_content .card{
+.offer-section_content .card {
   margin-bottom: 20px;
   @media(min-width: 992px){
     margin-bottom:0
@@ -333,14 +371,14 @@ border: none;
   align-items: center;
   color: white;
   
-  @media(min-width: 768px){
+  @media(min-width: 768px) {
     text-align:left;
     align-items: flex-start;
     margin-left: 50px;
   }
 }
 
-.aboutUs-section_text-title{
+.aboutUs-section_text-title {
   padding-bottom: 20px;
 
   @media(min-width: 992px){
@@ -349,7 +387,7 @@ border: none;
   }
 }
 
-.aboutUs-section_btn{
+.aboutUs-section_btn {
   padding-top: 20px;
 
   @media(min-width: 992px){
@@ -405,6 +443,7 @@ border: none;
 .realizations-section_gallery {
   max-height: 500px;
   overflow: hidden;
+
   @media(min-width:992px){
     max-height: 1000px;
   }
@@ -492,8 +531,7 @@ border: none;
   margin-top: 20px;
   @media (min-width: 992px) {
     margin-top: 0;
-    min-width: 160px;
-    max-width: 160px;
+    width:162px;
   }
 }
 
@@ -777,6 +815,5 @@ border: none;
 }
 
 .block-scroll {
-  /* height: 100vh; */
   overflow: hidden;
 }

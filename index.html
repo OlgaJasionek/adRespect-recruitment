@@ -7,14 +7,14 @@
   <title>Giard design</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
   <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 </head>
 
 <body>
@@ -25,14 +25,14 @@
           <img class="mobile-navigation_content-close-icon" src="public/svg/close-icon.svg" alt="close-icon">
         </button>
       </div>
-      <ul class=" mobile-navigation_content-list">
-        <li class="nav-item dropdown  nav_offer-link ">
-          <div class="navbar-collapse ">
-            <button class="nav-offer-link no-outline btn dropdown d-flex align-items-center " data-bs-toggle="dropdown"
+      <ul class="navigation mobile-navigation_content-list">
+        <li class="nav-item dropdown nav_offer-link">
+          <div class="navbar-collapse">
+            <button class="nav-offer-link no-outline btn dropdown d-flex align-items-center" data-bs-toggle="dropdown"
               aria-expanded="false">
-              Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
+              Oferta <img class="ms-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
             </button>
-            <ul class="dropdown-menu dropdown-menu  ">
+            <ul class="dropdown-menu dropdown-menu">
               <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
               <li><a class="dropdown-item" href="#">Projekty</a></li>
               <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
@@ -40,13 +40,13 @@
             </ul>
           </div>
         </li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#AboutUs">O firmie </a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
-        <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
+        <li class="nav-item"><a class="nav-link" href="#AboutUs">O firmie </a></li>
+        <li class="nav-item"><a class="nav-link" href="#Realizations">Realizacje</a></li>
+        <li class="nav-item"><a class="nav-link" href="#Contact">Kontakt</a></li>
         <li class="nav-item d-flex">
-          <form class="navigation-searchbar  navigation-searchbar_mobile input-group ">
+          <form class="navigation-searchbar  navigation-searchbar_mobile input-group">
             <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size">
-            <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
+            <button class="navigation-searchbar_button" type="button" id="button-addon1">Szukaj</button>
           </form>
           <img id="open-search-input-btn_mobile" class="search-icon nav-link" src="public/svg/search-icon.svg"
             alt="search-icon">
@@ -61,19 +61,19 @@
           </a>
         </div>
         <div class="mobile-navigation">
-          <button id="moblie-menu-btn" class="btn mobile-navigation_menu-btn">
+          <button id="mobile-menu-btn" class="btn mobile-navigation_menu-btn">
             <img src="public/svg/burger-icon.svg" alt="burger-menu-icon">
           </button>
         </div>
-        <div class="desctop-navigation">
-          <ul class=" nav d-flex justify-content-end ">
-            <li class="nav-item dropdown  nav_offer-link ">
-              <div class="navbar-collapse ">
+        <div class="navigation desktop-navigation">
+          <ul class=" nav d-flex justify-content-end">
+            <li class="nav-item dropdown nav_offer-link">
+              <div class="navbar-collapse">
                 <button class="nav-offer-link no-outline btn dropdown d-flex align-items-center"
                   data-bs-toggle="dropdown" aria-expanded="false">
-                  Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
+                  Oferta <img class="ms-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
                 </button>
-                <ul class="dropdown-menu dropdown-menu  ">
+                <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
                   <li><a class="dropdown-item" href="#">Projekty</a></li>
                   <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
@@ -81,15 +81,15 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item"><a class="nav-link text-dark" href="#AboutUs">O firmie </a></li>
-            <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
-            <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
+            <li class="nav-item"><a class="nav-link" href="#AboutUs">O firmie </a></li>
+            <li class="nav-item"><a class="nav-link" href="#Realizations">Realizacje</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Contact">Kontakt</a></li>
             <li class="nav-item d-flex">
-              <form class="navigation-searchbar navigation-searchbar_desctop input-group">
+              <form class="navigation-searchbar navigation-searchbar_desktop input-group">
                 <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size">
-                <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
+                <button class="navigation-searchbar_button" type="button" id="button-addon1">Szukaj</button>
               </form>
-              <img id="open-search-input-btn_desctop" class="search-icon nav-link" src="public/svg/search-icon.svg"
+              <img id="open-search-input-btn_desktop" class="search-icon nav-link" src="public/svg/search-icon.svg"
                 alt="search-icon">
             </li>
           </ul>
@@ -114,7 +114,7 @@
                 usług z indywidualnym podejściem do każdego projektu.</p>
               <div class="home-section_btn-group">
                 <button class="button button_filled--green ">Skontaktuj się z nami</button>
-                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="ps-1"
                     src="public/svg/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
@@ -134,7 +134,7 @@
               <p class="mb-0">Kompleksowe podejście do każdego klienta indywidualnie. Poznaj nas lepiej i zobacz
                 jakich realizacji się podejmujemy. </p>
               <div class="home-section_btn-group">
-                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="ps-1"
                     src="public/svg/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
@@ -215,7 +215,7 @@
             nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe,
             dostosowane do współczesnego trybu życia.</p>
           <div class="aboutUs-section_btn">
-            <button class="button button_outline button_outline--white">Poznaj nas bliżej<img class="pl-2"
+            <button class="button button_outline button_outline--white">Poznaj nas bliżej<img class="ps-2"
                 src="public/svg/right-arrow-white.svg" alt="green-arrow-down-icon"></button>
           </div>
         </div>
@@ -276,7 +276,7 @@
       </div>
       <div class="footer_rights">
         <p>Prawa zastrzeżone &copy; <span id="currentYear"></span></p>
-        <p class="footer_rights-author">made by <img class="ml-2" src="public/svg/adRespect-logo.svg"
+        <p class="footer_rights-author">made by <img class="ms-2" src="public/svg/adRespect-logo.svg"
             alt="adRespect-logo"></p>
       </div>
     </div>
