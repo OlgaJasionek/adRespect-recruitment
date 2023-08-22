@@ -18,12 +18,17 @@
 </head>
 
 <body>
-  <section class="nav position-relative ">
+  <section>
     <nav class="mobile-navigation_content">
-      <ul class="mobile-navigation_content-list">
+      <div class="d-flex justify-content-end ">
+        <button id="close-menu-btn" class="m-3 btn mobile-navigation_content-close-menu-btn">
+          <img class="mobile-navigation_content-close-icon" src="public/svg/close-icon.svg" alt="close-icon">
+        </button>
+      </div>
+      <ul class=" mobile-navigation_content-list">
         <li class="nav-item dropdown  nav_offer-link ">
           <div class="navbar-collapse ">
-            <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size" data-bs-toggle="dropdown"
+            <button class="nav-offer-link no-outline btn dropdown d-flex align-items-center " data-bs-toggle="dropdown"
               aria-expanded="false">
               Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
             </button>
@@ -39,32 +44,32 @@
         <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
         <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
         <li class="nav-item d-flex">
-          <form class="input-group">
-            <input type="text" placeholder="Wyszukaj.."
-              class="navigation_searchbar form-control no-outline sm-font-size">
+          <form class="navigation-searchbar  navigation-searchbar_mobile input-group ">
+            <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size">
             <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
           </form>
-          <img class="nav-link" src="public/svg/search-icon.svg" alt="search-icon">
+          <img id="open-search-input-btn_mobile" class="search-icon nav-link" src="public/svg/search-icon.svg"
+            alt="search-icon">
         </li>
       </ul>
     </nav>
     <div class="container ">
-      <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
+      <div class="d-flex align-items-center justify-content-between pt-3 pb-3">
         <div>
           <a href="#Home">
             <img src="public/svg/logo-black.svg" alt="logo">
           </a>
         </div>
         <div class="mobile-navigation">
-          <button class="btn mobile-navigation_menu-btn">
+          <button id="moblie-menu-btn" class="btn mobile-navigation_menu-btn">
             <img src="public/svg/burger-icon.svg" alt="burger-menu-icon">
           </button>
         </div>
         <div class="desctop-navigation">
-          <ul class=" nav d-flex justify-content-end sm-font-size">
+          <ul class=" nav d-flex justify-content-end ">
             <li class="nav-item dropdown  nav_offer-link ">
               <div class="navbar-collapse ">
-                <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size"
+                <button class="nav-offer-link no-outline btn dropdown d-flex align-items-center"
                   data-bs-toggle="dropdown" aria-expanded="false">
                   Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
                 </button>
@@ -80,19 +85,19 @@
             <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
             <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
             <li class="nav-item d-flex">
-              <form class="input-group">
-                <input type="text" placeholder="Wyszukaj.."
-                  class="navigation_searchbar form-control no-outline sm-font-size">
+              <form class="navigation-searchbar navigation-searchbar_desctop input-group">
+                <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size">
                 <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
               </form>
-              <img class="nav-link" src="public/svg/search-icon.svg" alt="search-icon">
+              <img id="open-search-input-btn_desctop" class="search-icon nav-link" src="public/svg/search-icon.svg"
+                alt="search-icon">
             </li>
           </ul>
         </div>
       </div>
   </section>
 
-  <section class="home-section  carousel slide" id="home-section">
+  <section class="home-section carousel slide" id="home-section" data-bs-ride="carousel">
     <div class="carousel-inner">
       <div class="carousel-item active">
         <div class="home-section_background">

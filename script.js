@@ -2,9 +2,26 @@ const currentYear = new Date().getFullYear();
 const galleryComponent = document.querySelector(
   ".realizations-section_gallery"
 );
-const showMoreImgBtn = document.getElementById("show-more");
 const galleryBackdropComponent = document.querySelector(
   ".realizations-section_backdrop"
+);
+const mobileNavComponent = document.querySelector(".mobile-navigation_content");
+const bodyComponent = document.body;
+const searchInputDesctopComponent = document.querySelector(
+  ".navigation-searchbar_desctop"
+);
+const searchInputMobileComponent = document.querySelector(
+  ".navigation-searchbar_mobile"
+);
+
+const showMoreImgBtn = document.getElementById("show-more");
+const menuMobileBtn = document.getElementById("moblie-menu-btn");
+const closeMobileMenuBtn = document.getElementById("close-menu-btn");
+const showSearchInputDesctopBtn = document.getElementById(
+  "open-search-input-btn_desctop"
+);
+const showSearchInputMobileBtn = document.getElementById(
+  "open-search-input-btn_mobile"
 );
 
 const galleryItemsUrl = [
@@ -56,4 +73,22 @@ showMoreImgBtn.addEventListener("click", () => {
     "realizations-section_backdrop--hidden"
   );
   galleryComponent.classList.add("realizations-section_gallery--visible");
+});
+
+menuMobileBtn.addEventListener("click", () => {
+  mobileNavComponent.classList.add("mobile-navigation_content--active");
+  bodyComponent.classList.add("block-scroll");
+});
+
+closeMobileMenuBtn.addEventListener("click", () => {
+  mobileNavComponent.classList.remove("mobile-navigation_content--active");
+  bodyComponent.classList.remove("block-scroll");
+});
+
+showSearchInputDesctopBtn.addEventListener("click", () => {
+  searchInputDesctopComponent.classList.toggle("navigation-searchabr--show");
+});
+
+showSearchInputMobileBtn.addEventListener("click", () => {
+  searchInputMobileComponent.classList.toggle("navigation-searchbar--show");
 });

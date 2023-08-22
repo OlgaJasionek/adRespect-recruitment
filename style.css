@@ -13,10 +13,40 @@
   --xxl-font-size: 60px;
 }
 
-.body {
+body {
+  position: relative;
   font-family: "Inter", sans-serif;
   width: 100vw;
   height: 100vh;
+}
+
+
+
+.nav-offer-link{
+ padding: 8px 16px;
+}
+
+.nav-offer-link:active{
+border: none;
+}
+
+.navigation-searchbar{
+  display: none;
+}
+
+.navigation-searchbar--show{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navigation-searchbar input{
+  padding: 8px 16px;
+  margin-left: 16px;
+}
+
+.search-icon{
+  cursor: pointer;
 }
 
 .desctop-navigation{
@@ -42,14 +72,42 @@
   background-color: var(--brown-color);
 }
 
-.mobile-naviogation_content{
-  position: absolute;
-  bottom: 0;
+.mobile-navigation_content{
+  border: 1px solid,rgb(183, 183, 183);
+  position: fixed;
+  top: 0;
   right: 0;
-  width: 400px;
   height: 100%;
-background-color: white;
+  background-color: white;
+  z-index: 1;
+  width: 300px;
+  transform: translateX(300px);
+  box-shadow: -4px 4px 4px 4px rgba(222, 222, 222, 0.3);
+  transition: transform, 0.5s;
 }
+
+.mobile-navigation_content--active{
+  transform: translateX(0px);
+}
+
+.mobile-navigation_content-list{
+  padding: 40px 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.mobile-navigation_content-close-menu-btn{
+  background-color: var(--gray-color);
+  transition: backgroud-color, .5s;
+}
+
+.mobile-navigation_content-close-menu-btn:hover{
+  background-color: var(--brown-color);
+}
+
 
 .home-section {
   position: relative;
@@ -84,7 +142,7 @@ background-color: white;
   background-size: cover;
 
   @media (min-width: 768px) {
-    height: 737px;
+    height: 100%;
   }
 }
 
@@ -95,7 +153,7 @@ background-color: white;
   background-size: cover;
 
   @media (min-width: 768px) {
-    height: 737px;
+    height: 100%;
   }
 }
 
@@ -441,7 +499,7 @@ background-color: white;
 
 .footer {
   padding: 20px 0;
-  background-color: black;
+  background-color:#111111;
   color: white;
 
   @media (min-width: 992px) {
@@ -452,8 +510,8 @@ background-color: white;
 .footer_contact-us {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-
+  align-items: center;
+  
   @media (min-width: 576px) {
     justify-content: space-between;
     flex-direction: row;
@@ -675,6 +733,12 @@ background-color: white;
 }
 
 .card {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  flex-direction: column;
+  
   padding: 48px 40px;
   background-color: white;
   max-width: 370px;
@@ -683,6 +747,11 @@ background-color: white;
   box-shadow: 2px 5px rgb(240, 238, 238);
   transition: box-shadow 0.5s;
   cursor: pointer;
+
+  @media(min-width: 992px){
+    align-items: flex-start;
+    text-align:left;
+  }
 }
 
 .card:hover {
@@ -705,4 +774,9 @@ background-color: white;
 
 .card_link a:hover {
   text-decoration: none;
+}
+
+.block-scroll {
+  /* height: 100vh; */
+  overflow: hidden;
 }
