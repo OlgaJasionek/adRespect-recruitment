@@ -18,37 +18,77 @@
 </head>
 
 <body>
-  <section class="nav">
-    <div class="container">
+  <section class="nav position-relative ">
+    <nav class="mobile-navigation_content">
+      <ul class="mobile-navigation_content-list">
+        <li class="nav-item dropdown  nav_offer-link ">
+          <div class="navbar-collapse ">
+            <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
+            </button>
+            <ul class="dropdown-menu dropdown-menu  ">
+              <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
+              <li><a class="dropdown-item" href="#">Projekty</a></li>
+              <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
+              <li><a class="dropdown-item" href="#">Realizacje</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#AboutUs">O firmie </a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
+        <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
+        <li class="nav-item d-flex">
+          <form class="input-group">
+            <input type="text" placeholder="Wyszukaj.."
+              class="navigation_searchbar form-control no-outline sm-font-size">
+            <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
+          </form>
+          <img class="nav-link" src="public/svg/search-icon.svg" alt="search-icon">
+        </li>
+      </ul>
+    </nav>
+    <div class="container ">
       <div class="d-flex align-items-center justify-content-between mt-3 mb-3">
         <div>
           <a href="#Home">
             <img src="public/svg/logo-black.svg" alt="logo">
           </a>
         </div>
-        <ul class="nav d-flex justify-content-end sm-font-size">
-          <li class="nav-item dropdown  nav_offer-link ">
-            <div class="navbar-collapse ">
-              <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
-              </button>
-              <ul class="dropdown-menu dropdown-menu  ">
-                <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
-                <li><a class="dropdown-item" href="#">Projekty</a></li>
-                <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
-                <li><a class="dropdown-item" href="#">Realizacje</a></li>
-              </ul>
-            </div>
-          </li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#AboutUs">O firmie </a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
-          <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
-          <li class="nav-item d-flex">
-            <!-- <input type="text" placeholder="Wyszukaj.." class="form-control no-outline sm-font-size"> -->
-            <img class="nav-link" src="public/svg/search-icon.svg" alt="search-icon">
-          </li>
-        </ul>
+        <div class="mobile-navigation">
+          <button class="btn mobile-navigation_menu-btn">
+            <img src="public/svg/burger-icon.svg" alt="burger-menu-icon">
+          </button>
+        </div>
+        <div class="desctop-navigation">
+          <ul class=" nav d-flex justify-content-end sm-font-size">
+            <li class="nav-item dropdown  nav_offer-link ">
+              <div class="navbar-collapse ">
+                <button class=" no-outline btn dropdown d-flex align-items-center sm-font-size"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Oferta <img class="ml-1" src="public/svg/offer-icon.svg" alt="down-arrow-icon">
+                </button>
+                <ul class="dropdown-menu dropdown-menu  ">
+                  <li><a class="dropdown-item" href="#Offer">Oferta</a></li>
+                  <li><a class="dropdown-item" href="#">Projekty</a></li>
+                  <li><a class="dropdown-item" href="#">Wizualizacje</a></li>
+                  <li><a class="dropdown-item" href="#">Realizacje</a></li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item"><a class="nav-link text-dark" href="#AboutUs">O firmie </a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="#Realizations">Realizacje</a></li>
+            <li class="nav-item"><a class="nav-link text-dark" href="#Contact">Kontakt</a></li>
+            <li class="nav-item d-flex">
+              <form class="input-group">
+                <input type="text" placeholder="Wyszukaj.."
+                  class="navigation_searchbar form-control no-outline sm-font-size">
+                <button class="btn btn-outline-dark" type="button" id="button-addon1">Szukaj</button>
+              </form>
+              <img class="nav-link" src="public/svg/search-icon.svg" alt="search-icon">
+            </li>
+          </ul>
+        </div>
       </div>
   </section>
 
@@ -60,7 +100,7 @@
           <div class="home-section_background-img1"></div>
         </div>
         <div class="home-section_text">
-          <div class="container h-100 ">
+          <div class="container h-100  home-section_background">
             <div class="home-section_text-content">
               <h1 class="home-section_main-title xxl-font-size">Nowoczesna aranżacja Twojego ogrodu </h1>
               <p>Marka GiardDesign to wieloletnie doświadczenie i wysoka estetyka realizacji.
@@ -68,11 +108,12 @@
                 kompleksowy zakres
                 usług z indywidualnym podejściem do każdego projektu.</p>
               <div class="home-section_btn-group">
-                <button class="button button-green-filled ">Skontaktuj się z nami</button>
-                <button class="button button-outline button-outline_green">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button_filled--green ">Skontaktuj się z nami</button>
+                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="pl-1"
                     src="public/svg/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -82,17 +123,17 @@
           <div class="home-section_background-img2"></div>
         </div>
         <div class="home-section_text">
-          <div class="container h-100">
+          <div class="container h-100 home-section_background">
             <div class="home-section_text-content">
-
               <h1 class="home-section_main-title xxl-font-size">Zaprojektujmy razem twój ogród </h1>
-              <p class="mt-5 mb-0">Kompleksowe podejście do każdego klienta indywidualnie. Poznaj nas lepiej i zobacz
+              <p class="mb-0">Kompleksowe podejście do każdego klienta indywidualnie. Poznaj nas lepiej i zobacz
                 jakich realizacji się podejmujemy. </p>
               <div class="home-section_btn-group">
-                <button class="button button-outline button-outline_green">Zobacz nasze realizacje <img class="pl-1"
+                <button class="button button_outline button_outline--green">Zobacz nasze realizacje <img class="pl-1"
                     src="public/svg/green-arrow-down.svg" alt="green-arrow-down-icon"></button>
               </div>
             </div>
+            <div></div>
           </div>
         </div>
       </div>
@@ -110,7 +151,7 @@
     <div class="container">
       <header class="offer-section_header">
         <p class="badge green-badge">Oferta</p>
-        <h2 class="title">Działamy <span class="title title-italic">kompleksowo</span></h2>
+        <h2 class="offer-section_header-title title">Działamy <span class="title title-italic">kompleksowo</span></h2>
         <p>Oferujemy kompletną obsługę inwestycji terenów zielonych. Projektujemy nowoczesne ogrody przydomowe oraz
           rezydencjonalne. Stworzymy dla Ciebie projekt, zwizualizujemy go i wcielimy w życie, a na każdym etapie
           posłużymy radą i wieloletnim doświadczeniem. </p>
@@ -162,13 +203,14 @@
         <div></div>
         <div class="aboutUs-section_text">
           <p class="badge white-badge">O firmie</p>
-          <h2 class="title">Tworzymy z <span class="title title-italic">pasją</span></h2>
-          <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz architekci,
+          <h2 class="aboutUs-section_text-title title">Tworzymy z <span class="title title-italic">pasją</span></h2>
+          <p>Każdy projekt to nowe wyzwanie. Dlatego nasz zespół tworzą wykwalifikowani projektanci oraz
+            architekci,
             których zadaniem jest rozpoznanie i realizacja potrzeb każdego Klienta. Nasza specjalizacja to przestrzenie
             nowoczesne, które charakteryzuje minimalizm, geometria i elegancka prostota. Tworzymy ogrody małoobsługowe,
             dostosowane do współczesnego trybu życia.</p>
-          <div class="home-section_btn-group">
-            <button class="button button-outline button-outline_white">Poznaj nas bliżej<img class="pl-2"
+          <div class="aboutUs-section_btn">
+            <button class="button button_outline button_outline--white">Poznaj nas bliżej<img class="pl-2"
                 src="public/svg/right-arrow-white.svg" alt="green-arrow-down-icon"></button>
           </div>
         </div>
@@ -177,7 +219,8 @@
   </section>
   <section class="realizations-section" id="Realizations">
     <div class="realizations-section_backdrop">
-      <button>guzik</button>
+      <button id="show-more" class="button button_outline button_outline--black">Rozwiń <img
+          src="public/svg/black-arrow-down.svg" alt="black-arrow-down-icon"></button>
     </div>
     <div class="container">
       <div class="realizations-section_title">
@@ -198,8 +241,8 @@
           </h2>
         </div>
         <div class="contact-section_content">
-          <p class="">Śledź nasze najnowsze realizacje!</p>
-          <button class="button button-white-filled">Instagram</button>
+          <p class="contact-section_content-text">Śledź nasze najnowsze realizacje!</p>
+          <button class="button button_filled--white">Instagram</button>
         </div>
       </div>
     </div>
@@ -210,7 +253,7 @@
         <img src="public/svg/logo-white.svg" alt="logo-white">
         <div class="footer_contact-us-text">
           <p class="footer_contact-us-text-to-us">Daj znać co możemy dla Ciebie zrobić!</p>
-          <button class="button button-green-filled">Skontaktuj się z nami</button>
+          <button class="button button_filled--green">Skontaktuj się z nami</button>
         </div>
       </div>
       <hr class="footer_white-line">

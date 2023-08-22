@@ -1,5 +1,12 @@
 const currentYear = new Date().getFullYear();
-const gallery = document.querySelector(".realizations-section_gallery");
+const galleryComponent = document.querySelector(
+  ".realizations-section_gallery"
+);
+const showMoreImgBtn = document.getElementById("show-more");
+const galleryBackdropComponent = document.querySelector(
+  ".realizations-section_backdrop"
+);
+
 const galleryItemsUrl = [
   { url: "public/img/gallery/Photo (1).png", alt: "Photo 1" },
   { url: "public/img/gallery/Photo (2).png", alt: "Photo 2" },
@@ -29,16 +36,24 @@ galleryItemsUrl.map(item => {
   itemImg.alt = item.alt;
 
   itemWrapper.appendChild(itemImg);
-  gallery.appendChild(itemWrapper);
+  galleryComponent.appendChild(itemWrapper);
 });
 
 document.getElementById("currentYear").textContent = currentYear;
 
 window.onload = () => {
-  const galleryMasonry = new Masonry(gallery, {
+  const galleryMasonry = new Masonry(galleryComponent, {
     querySelector: ".gallery-item",
     columnWidth: ".grid-sizer",
     gutter: ".gutter-sizer",
     percentPosition: true,
   });
 };
+
+showMoreImgBtn.addEventListener("click", () => {
+  galleryBackdropComponent.classList.remove("realizations-section_backdrop");
+  galleryBackdropComponent.classList.add(
+    "realizations-section_backdrop--hidden"
+  );
+  galleryComponent.classList.add("realizations-section_gallery--visible");
+});
