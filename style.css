@@ -26,27 +26,44 @@
 
 .home-section_background {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
+
+  @media (min-width: 680px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .home-section_background-brown {
-  height: 737px;
+  width: 100%;
+  height: 400px;
   background-color: var(--brown-color);
+
+  @media (min-width: 680px) {
+    height: 737px;
+  }
 }
 
 .home-section_background-img1 {
-  height: 737px;
+  width: 100%;
+  height: 300px;
   background-image: url("public/img/hero-photo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (min-width: 680px) {
+    height: 737px;
+  }
 }
 
 .home-section_background-img2 {
   height: 100%;
   background-image: url("public/img/hero-image2.jpg");
-}
+  background-repeat: no-repeat;
+  background-size: cover;
 
-.home-section_title {
-  font-size: var(--xxl-font-size);
-  margin-bottom: 40px;
+  @media (min-width: 680px) {
+    height: 737px;
+  }
 }
 
 .home-section_text {
@@ -62,19 +79,34 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100%;
-  width: 45%;
+  width: 100%;
+  height: 45%;
+
+  @media (min-width: 680px) {
+    width: 45%;
+    height: 100%;
+  }
 }
 
 .home-section_main-title {
   font-family: "Montserrat", sans-serif;
+  margin-bottom: 20px;
+
+  @media (min-width: 680px) {
+    margin-bottom: 44px;
+  }
 }
 
 .home-section_btn-group {
-  margin-top: 70px;
+  margin-top: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   width: 100%;
+
+  @media (min-width: 680px) {
+    margin-top: 70px;
+  }
 }
 
 .home-section_carousel-panel {
@@ -127,7 +159,9 @@
 
 .aboutUs-section_background-img {
   height: 720px;
-  background-image: url("public/img/O\ firmie-block.png");
+  background-image: url("public/img/o-firmie.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .aboutUs-section_content {
@@ -149,8 +183,28 @@
 }
 
 .realizations-section {
+  position: relative;
   padding: 120px 0;
   background-color: var(--brown-color);
+}
+
+.realizations-section_backdrop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  z-index: 1;
+  background: linear-gradient(
+    0deg,
+    rgba(220, 193, 171, 1) 0%,
+    rgba(220, 193, 171, 0.7553615196078431) 31%,
+    rgba(220, 193, 171, 0.0214679621848739) 100%
+  );
+}
+
+.realizations-section_backdrop--hidden {
+  display: none;
 }
 
 .realizations-section_title {
@@ -158,7 +212,33 @@
 }
 
 .realizations-section_gallery {
-  display: grid;
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.realizations-section--visible {
+  overflow: auto;
+  max-height: none;
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+  /* width: calc(100% / 3 - 20px); */
+}
+
+.grid-sizer,
+.gallery-item {
+  width: 32.66%;
+}
+
+.gutter-sizer {
+  width: 1%;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .contact-section {
@@ -177,20 +257,40 @@
 }
 
 .footer {
-  padding: 80px 0;
+  padding: 20px 0;
   background-color: black;
   color: white;
+
+  @media (min-width: 992px) {
+    padding: 80px 0;
+  }
 }
 
 .footer_contact-us {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
 }
 
 .footer_contact-us-text {
   display: flex;
   align-items: center;
+  flex-direction: column;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.footer_contact-us-text-to-us {
+  @media (min-width: 992px) {
+    margin-right: 16px;
+    margin-bottom: 0;
+  }
 }
 
 .footer_white-line {
@@ -293,9 +393,16 @@
 }
 
 .xxl-font-size {
-  font-size: var(--xxl-font-size);
+  font-size: var(--lg-font-size);
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
+
+  @media (min-width: 576px) {
+    font-size: var(--xl-font-size);
+  }
+  @media (min-width: 992px) {
+    font-size: var(--xxl-font-size);
+  }
 }
 
 .badge {
