@@ -4,6 +4,7 @@
   --dark-green-color: #144927;
   --gray-color: #f5f0ec;
 }
+
 :root {
   --xs-font-size: 12px;
   --sm-font-size: 14px;
@@ -201,6 +202,12 @@ a {
   left: 0;
   width: 100%;
   height: 100%;
+  padding: 20px 0;
+  font-size: var(--sm-font-size);
+
+  @media (min-width:992px){
+  font-size:var(--standrad-font-size)
+  }
 }
 
 .home-section_text-content {
